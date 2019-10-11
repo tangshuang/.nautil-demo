@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "scripts": {
+    "build-web": "nautil-cli build web",
+    "build-wc": "nautil-cli build web-component",
+    "build-miniapp": "nautil-cli build miniapp",
+    "build-native": "nautil-cli build native",
+    "dev-web": "nautil-cli dev web",
+    "dev-wc": "nautil-cli dev web-component",
+    "dev-miniapp": "nautil-cli dev miniapp",
+    "dev-native": "nautil-cli dev native"
+  },
+  "dependencies": {
+    "i18next-browser-languagedetector": "^4.0.0",
+    "i18next-react-native-language-detector": "^1.0.2",
+    "nautil": "^0.2.7",
+    "react-native-locale-detector": "^1.0.1"
+  },
+  "devDependencies": {
+    "nautil-cli": "0.0.32"
+  },
+  "name": "my-test-app"
+}
