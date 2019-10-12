@@ -13,7 +13,7 @@
   "dependencies": {
     "i18next-browser-languagedetector": "^4.0.0",
     "i18next-react-native-language-detector": "^1.0.2",
-    "nautil": "^0.2.7",
+    "nautil": "^0.2.10",
     "react-native-locale-detector": "^1.0.1"
   },
   "devDependencies": {

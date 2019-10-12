@@ -1,4 +1,5 @@
 import { Navigation } from 'nautil'
+import { Text } from 'nautil/components'
 
 import Page1 from './pages/Page1.jsx'
 import Page2 from './pages/Page2.jsx'
@@ -66,7 +67,7 @@ const navigation = new Navigation({
             {
               name: 'subchild2',
               path: '/subchild2',
-              component: () => 'subchild2',
+              component: () => <Text>subchild2</Text>,
             },
           ],
         },
