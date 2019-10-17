@@ -7,14 +7,14 @@ import Page3 from './pages/Page3.jsx'
 import Page4 from './pages/Page4.jsx'
 import Page5 from './pages/Page5.jsx'
 import Page6 from './pages/Page6.jsx'
-import { Page7, Child } from './pages/Page7.jsx'
+import Page7 from './pages/Page7.jsx'
 
 import Home from './pages/Home.jsx'
 import NotFound from './pages/NotFound.jsx'
 
 const navigation = new Navigation({
   base: '/',
-  mode: 'hash',
+  mode: process.env.RUNTIME_ENV === 'web' ? 'hash' : 'none',
   routes: [
     {
       name: 'home',
@@ -82,7 +82,7 @@ const navigation = new Navigation({
       ],
     },
   ],
-  notFoundComponent: NotFound,
+  notFound: NotFound,
   maxHistoryLength: 20,
   defaultRoute: 'home',
 })

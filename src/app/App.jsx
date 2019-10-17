@@ -13,7 +13,7 @@ class App extends Component {
       <Section stylesheet={styles.app}>
         <Section stylesheet={styles.container}>
           <Language i18n={i18n} dispatch={this.update}>
-            <Navigator navigation={navigation} />
+            <Navigator navigation={navigation} inside />
           </Language>
         </Section>
       </Section>

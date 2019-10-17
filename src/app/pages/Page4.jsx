@@ -100,6 +100,6 @@ export class Page4 extends Component {
 export default pipe([
   initialize('form', FormModel),
   observe('form'),
-  inject('navigation', () => navigation),
   inject('depo', depo),
+  inject('navigation', () => navigation),
 ])(Page4)
