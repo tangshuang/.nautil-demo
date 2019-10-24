@@ -6,7 +6,7 @@ import { Animation } from 'nautil/animation'
 export class Page7 extends Component {
   render() {
     return (
-      <Section>
+      <>
         <Section>
           <Navigate to="home">
             <Button><T>home</T></Button>
@@ -45,7 +45,7 @@ export class Page7 extends Component {
           <Route match="page7.child.subchild" component={Child}></Route>
           <Route match="page7.child.subchild2"></Route>
         </Route>
-      </Section>
+      </>
     )
   }
 }

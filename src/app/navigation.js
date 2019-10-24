@@ -14,7 +14,7 @@ import NotFound from './pages/NotFound.jsx'
 
 const navigation = new Navigation({
   base: '/',
-  mode: process.env.RUNTIME_ENV === 'web' ? 'hash' : 'none',
+  mode: process.env.RUNTIME_ENV === 'web' || process.env.RUNTIME_ENV.indexOf('ssr-') === 0 ? 'history' : 'none',
   routes: [
     {
       name: 'home',

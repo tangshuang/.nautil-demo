@@ -8,16 +8,23 @@
     "dev-web": "nautil-cli dev web",
     "dev-wc": "nautil-cli dev web-component",
     "dev-miniapp": "nautil-cli dev miniapp",
-    "dev-native": "nautil-cli dev native"
+    "dev-native": "nautil-cli dev native",
+    "build-ssr:client": "nautil-cli build ssr-client",
+    "build-ssr:server": "nautil-cli build ssr-server",
+    "build-ssr": "npm run build-ssr:server && npm run build-ssr:client",
+    "dev-ssr:server": "nautil-cli build ssr-server --watch --env=development",
+    "dev-ssr:client": "nautil-cli build ssr-client --watch --env=development",
+    "dev-ssr:start": "cd dist/ssr && nodemon server.js",
+    "dev-ssr": "nautil-cli build ssr-server && (npm run dev-ssr:server & npm run dev-ssr:client & npm run dev-ssr:start)"
   },
   "dependencies": {
     "i18next-browser-languagedetector": "^4.0.0",
     "i18next-react-native-language-detector": "^1.0.2",
-    "nautil": "^0.5.0",
+    "nautil": "^0.7.1",
     "react-native-locale-detector": "^1.0.1"
   },
   "devDependencies": {
-    "nautil-cli": "0.0.34"
+    "nautil-cli": "^0.1.0"
   },
   "name": "my-test-app"
 }

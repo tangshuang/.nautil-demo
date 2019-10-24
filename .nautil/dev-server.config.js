@@ -1,5 +1,5 @@
 module.exports = {
-  before(app, server) {
+  before(app) {
     const person = {
       name: 'tomy',
       age: 10,
