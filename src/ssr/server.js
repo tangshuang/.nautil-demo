@@ -6,10 +6,6 @@ import depo from '../app/depo.js'
 import express from 'express'
 import path from 'path'
 
-depo.setConfig({
-  baseURL: 'http://127.0.0.1:9000'
-})
-
 const app = express()
 const http = createHttp(App, {}, {
   navigations: [
@@ -20,11 +16,15 @@ const http = createHttp(App, {}, {
   ],
   async onRequest(req) {
     const { status, state } = navigation
+
+    depo.setConfig({
+      baseURL: 'http://127.0.0.1:9000',
+    })
+
     if (status) {
       const { name } = state
       if (name === 'page1') {
-        const data = await depo.request('info')
-        this.info = data
+        await depo.request('info')
       }
     }
   },

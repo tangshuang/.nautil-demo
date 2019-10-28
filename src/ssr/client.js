@@ -1,5 +1,6 @@
 import '../web/index.less'
-import { hydrate } from 'nautil/dom-ssr'
+
+import { hydrate } from 'nautil/ssr-client'
 import App from '../app/app.jsx'
 import navigation from '../app/navigation.js'
 import depo from '../app/depo.js'

@@ -1,20 +1,20 @@
 import { Navigation } from 'nautil'
 import { Text } from 'nautil/components'
 
-import Page1 from './pages/Page1.jsx'
-import Page2 from './pages/Page2.jsx'
-import Page3 from './pages/Page3.jsx'
-import Page4 from './pages/Page4.jsx'
-import Page5 from './pages/Page5.jsx'
-import Page6 from './pages/Page6.jsx'
-import Page7 from './pages/Page7.jsx'
+import Page1 from './pages/page1.jsx'
+import Page2 from './pages/page2.jsx'
+import Page3 from './pages/page3.jsx'
+import Page4 from './pages/page4.jsx'
+import Page5 from './pages/page5.jsx'
+import Page6 from './pages/page6.jsx'
+import Page7 from './pages/page7.jsx'
 
-import Home from './pages/Home.jsx'
-import NotFound from './pages/NotFound.jsx'
+import Home from './pages/home.jsx'
+import NotFound from './pages/not-found.jsx'
 
 const navigation = new Navigation({
   base: '/',
-  mode: process.env.RUNTIME_ENV === 'web' || process.env.RUNTIME_ENV.indexOf('ssr-') === 0 ? 'history' : 'none',
+  mode: process.env.RUNTIME_ENV === 'dom' || process.env.RUNTIME_ENV === 'ssr' || process.env.RUNTIME_ENV === 'ssr-client' ? 'history' : 'none',
   routes: [
     {
       name: 'home',

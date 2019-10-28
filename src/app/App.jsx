@@ -2,7 +2,7 @@ import { Component } from 'nautil'
 import { Section, Navigator } from 'nautil/components'
 import { Language } from 'nautil/i18n'
 
-import styles from './App.css'
+import styles from './app.css'
 
 import navigation from './navigation.js'
 import i18n from './i18n.js'

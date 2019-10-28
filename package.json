@@ -1,30 +1,26 @@
 {
   "private": true,
   "scripts": {
-    "build-web": "nautil-cli build web",
+    "build-dom": "nautil-cli build dom",
     "build-wc": "nautil-cli build web-component",
     "build-miniapp": "nautil-cli build miniapp",
     "build-native": "nautil-cli build native",
-    "dev-web": "nautil-cli dev web",
+    "dev-dom": "nautil-cli dev dom",
     "dev-wc": "nautil-cli dev web-component",
     "dev-miniapp": "nautil-cli dev miniapp",
     "dev-native": "nautil-cli dev native",
+    "build-ssr:server": "nautil-cli build ssr",
     "build-ssr:client": "nautil-cli build ssr-client",
-    "build-ssr:server": "nautil-cli build ssr-server",
     "build-ssr": "npm run build-ssr:server && npm run build-ssr:client",
-    "dev-ssr:server": "nautil-cli build ssr-server --watch --env=development",
-    "dev-ssr:client": "nautil-cli build ssr-client --watch --env=development",
-    "dev-ssr:start": "cd dist/ssr && nodemon server.js",
-    "dev-ssr": "nautil-cli build ssr-server && (npm run dev-ssr:server & npm run dev-ssr:client & npm run dev-ssr:start)"
+    "dev-ssr:server": "nautil-cli dev ssr",
+    "dev-ssr:client": "nautil-cli dev ssr-client",
+    "dev-ssr": "npm run dev-ssr:client & npm run dev-ssr:server",
+    "antmove:alipay": "antmove wx-alipay -i dist/wx-app -o dist/alipay-app"
   },
   "dependencies": {
-    "i18next-browser-languagedetector": "^4.0.0",
-    "i18next-react-native-language-detector": "^1.0.2",
-    "nautil": "^0.7.1",
-    "react-native-locale-detector": "^1.0.1"
+    "nautil": "^0.8.6"
   },
   "devDependencies": {
-    "nautil-cli": "^0.1.0"
-  },
-  "name": "my-test-app"
+    "nautil-cli": "^0.2.9"
+  }
 }
