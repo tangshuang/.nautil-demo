@@ -1,5 +1,5 @@
 import { register } from 'nautil/native'
-import App from '../app/App.jsx'
+import App from '../app/app.jsx'
 import { SafeAreaView } from 'react-native'
 
 function NativeApp() {

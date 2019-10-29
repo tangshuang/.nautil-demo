@@ -13,9 +13,9 @@
     "dev:ssr": "nautil-cli dev ssr"
   },
   "dependencies": {
-    "nautil": "^0.8.8"
+    "nautil": "^0.8.9"
   },
   "devDependencies": {
-    "nautil-cli": "^0.2.13"
+    "nautil-cli": "^0.2.14"
   }
 }

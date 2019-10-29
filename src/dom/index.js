@@ -1,6 +1,6 @@
 import './index.less'
 
-import { mount } from 'nautil/dom'
-import App from '../app/App.jsx'
+import { mount, update } from 'nautil/dom'
+import App from '../app/app.jsx'
 
 mount('#app', App)
