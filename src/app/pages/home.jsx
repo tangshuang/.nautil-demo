@@ -1,11 +1,12 @@
 import { Navigate, Section, Text, Button } from 'nautil/components'
 import { T, Locale } from 'nautil/i18n'
+import styles from './home.css'
 
 export function Home() {
   return (
     <Section>
       <Section>
-        <Text><T>welcome</T></Text>
+        <Text stylesheet={styles.welcome}><T t="welcome">Welcome to Nautil's world!</T></Text>
       </Section>
       <Section>
         <Navigate to="page1">
