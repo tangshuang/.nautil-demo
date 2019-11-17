@@ -1,5 +1,5 @@
 import { I18n } from 'nautil/i18n'
-import LanguageDetector from 'i18next-browser-languagedetector'
+import { LanguageDetector } from 'nautil/lib/i18n/language-detector'
 
 export const i18n = new I18n({
   fallbackLng: 'en-US',
@@ -29,9 +29,9 @@ export const i18n = new I18n({
       },
     },
   },
-  use(i18next) {
-    i18next.use(LanguageDetector)
-  },
+  use: [
+    LanguageDetector,
+  ],
 })
 
 export default i18n

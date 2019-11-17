@@ -1,5 +1,6 @@
 // https://github.com/wechat-miniprogram/kbone/blob/develop/docs/quickstart.md
-// https://github.com/tangshuang/nautil-cli/blob/master/configs/mp.config.js
+// https://github.com/wechat-miniprogram/kbone/blob/develop/docs/miniprogram.config.js
+
 module.exports = {
   // 页面 origin，默认是 https://miniprogram.default
   origin: 'https://domain.com',
@@ -9,6 +10,7 @@ module.exports = {
   router: {
     // 路由可以是多个值，支持动态路由
     home: [
+      // 使用正则表达式的字符串形式，会被传入 new RegExp 中
       '(home|index)?',
     ],
   },
@@ -22,7 +24,7 @@ module.exports = {
   },
   // 项目配置，会被合并到 project.config.json
   projectConfig: {
-    appid: process.env.WX_APP_ID,
+    appid: process.env.WECHAT_MINIPROGRAM_APP_ID,
   },
   // 包配置，会被合并到 package.json
   packageConfig: {

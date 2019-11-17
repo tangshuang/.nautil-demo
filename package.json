@@ -1,26 +1,27 @@
 {
   "private": true,
   "scripts": {
-    "build-dom": "nautil-cli build dom",
-    "build-wc": "nautil-cli build web-component",
-    "build-miniapp": "nautil-cli build miniapp",
-    "build-native": "nautil-cli build native",
-    "dev-dom": "nautil-cli dev dom",
-    "dev-wc": "nautil-cli dev web-component",
-    "dev-miniapp": "nautil-cli dev miniapp",
-    "dev-native": "nautil-cli dev native",
-    "build-ssr:server": "nautil-cli build ssr",
-    "build-ssr:client": "nautil-cli build ssr-client",
-    "build-ssr": "npm run build-ssr:server && npm run build-ssr:client",
-    "dev-ssr:server": "nautil-cli dev ssr",
-    "dev-ssr:client": "nautil-cli dev ssr-client",
-    "dev-ssr": "npm run dev-ssr:client & npm run dev-ssr:server",
-    "antmove:alipay": "antmove wx-alipay -i dist/wx-app -o dist/alipay-app"
+    "build:dom": "nautil-cli build dom",
+    "build:webc": "nautil-cli build web-component",
+    "build:wemp": "nautil-cli build wechat-miniprogram",
+    "build:rn": "nautil-cli build react-native",
+    "build:ssr": "nautil-cli build ssr",
+    "dev:dom": "nautil-cli dev dom",
+    "dev:webc": "nautil-cli dev web-component",
+    "dev:wemp": "nautil-cli dev wechat-miniprogram",
+    "dev:rn": "nautil-cli dev react-native",
+    "dev:ssr": "nautil-cli dev ssr",
+    "dev": "npm run dev:dom"
   },
   "dependencies": {
-    "nautil": "^0.8.6"
+    "cookie-parser": "^1.4.4",
+    "core-js": "^3.4.1",
+    "nautil": "^0.12.1",
+    "regenerator-runtime": "^0.13.3"
   },
   "devDependencies": {
-    "nautil-cli": "^0.2.9"
+    "@babel/runtime-corejs3": "^7.7.2",
+    "nautil-cli": "^0.5.1",
+    "postcss-preset-env": "^6.7.0"
   }
 }
