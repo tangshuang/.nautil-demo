@@ -4,20 +4,24 @@
   "scripts": {
     "build:dom": "nautil-cli build dom",
     "build:webc": "nautil-cli build web-component",
-    "build:wx-mp": "nautil-cli build wx-mp",
-    "build:native": "nautil-cli build native",
+    "build:wemp": "nautil-cli build wechat-miniprogram",
+    "build:rn": "nautil-cli build react-native",
     "build:ssr": "nautil-cli build ssr",
     "dev:dom": "nautil-cli dev dom",
     "dev:webc": "nautil-cli dev web-component",
-    "dev:wx-mp": "nautil-cli dev wx-mp",
-    "dev:native": "nautil-cli dev native",
-    "dev:ssr": "nautil-cli dev ssr"
+    "dev:wemp": "nautil-cli dev wechat-miniprogram",
+    "dev:rn": "nautil-cli dev react-native",
+    "dev:ssr": "nautil-cli dev ssr",
+    "dev": "npm run dev:dom"
   },
   "dependencies": {
-    "@react-native-community/async-storage": "^1.6.2",
-    "nautil": "^0.12.6"
+    "cookie-parser": "^1.4.4",
+    "core-js": "^3.4.1",
+    "nautil": "^0.12.6",
+    "regenerator-runtime": "^0.13.3"
   },
   "devDependencies": {
-    "nautil-cli": "^0.6.0"
+    "nautil-cli": "^0.6.0",
+    "postcss-preset-env": "^6.7.0"
   }
 }

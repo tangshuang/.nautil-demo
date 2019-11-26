@@ -2,9 +2,11 @@ import { createHttp } from 'nautil/ssr'
 import App from '../app/app.jsx'
 import navigation from '../app/navigation.js'
 import depo from '../app/depo.js'
+import i18n from '../app/i18n.js'
 
 import express from 'express'
 import path from 'path'
+import cookieParser from 'cookie-parser'
 
 const app = express()
 const http = createHttp(App, {}, {
@@ -13,6 +15,9 @@ const http = createHttp(App, {}, {
   ],
   depositories: [
     depo,
+  ],
+  i18ns: [
+    i18n,
   ],
   async onRequest(req) {
     const { status, state } = navigation
@@ -31,10 +36,11 @@ const http = createHttp(App, {}, {
 })
 
 if (process.env.NODE_ENV === 'development') {
-  const proxy = require('../../.nautil/dev-server.config')
-  proxy.before(app)
+  const config = require('../../.nautil/before.hook')()
+  config.devServer.before(app)
 }
 
+app.use(cookieParser())
 app.use(express.static(path.resolve(__dirname, 'public')))
 app.use('*', http)
 
