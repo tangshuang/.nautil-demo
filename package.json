@@ -1,4 +1,5 @@
 {
+  "name": "nautil-demo",
   "private": true,
   "scripts": {
     "build:dom": "nautil-cli build dom",
@@ -13,9 +14,10 @@
     "dev:ssr": "nautil-cli dev ssr"
   },
   "dependencies": {
-    "nautil": "^0.8.9"
+    "@react-native-community/async-storage": "^1.6.2",
+    "nautil": "^0.12.6"
   },
   "devDependencies": {
-    "nautil-cli": "^0.2.14"
+    "nautil-cli": "^0.6.0"
   }
 }
