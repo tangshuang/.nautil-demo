@@ -20,7 +20,7 @@
     "nautil": "^0.12.7"
   },
   "devDependencies": {
-    "nautil-cli": "^0.6.2",
+    "nautil-cli": "^0.19.4",
     "postcss-preset-env": "^6.7.0"
   }
 }
